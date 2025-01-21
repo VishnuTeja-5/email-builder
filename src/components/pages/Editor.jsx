@@ -198,9 +198,9 @@ function Editor() {
     }
   };
 
-  const handlePreview = () => {
-    navigate('/preview', { state: { templateContent: template.templateContent } });
-  };
+  const handlePreview = () => { 
+    const updatedContent = frameRef.current.contentWindow.document.body.innerHTML; 
+    navigate('/preview', { state: { templateContent: updatedContent } }); };
 
   return (
     <div className='w-full h-full flex flex-col md:grid md:grid-cols-12'>

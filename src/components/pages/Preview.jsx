@@ -17,6 +17,9 @@ function Preview() {
 
   return (
     <div className='w-full h-full flex flex-col items-center justify-center'>
+      <button onClick={downloadHTML} className='mt-4 p-2 bg-blue-500 text-white rounded'>
+        Download HTML
+      </button>
       <div className='w-full h-[80vh] border border-black/20 p-4'>
         <iframe
           style={{ width: '100%', height: '100%' }}
@@ -24,9 +27,7 @@ function Preview() {
           title='Preview'
         />
       </div>
-      <button onClick={downloadHTML} className='mt-4 p-2 bg-blue-500 text-white rounded'>
-        Download HTML
-      </button>
+      
     </div>
   );
 }
