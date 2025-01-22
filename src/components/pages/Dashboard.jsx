@@ -2,11 +2,12 @@ import React, { useEffect, useState } from 'react'
 import { selectUserData } from '../store/authSlice';
 import { useSelector } from 'react-redux';
 import service from '../../appwrite/services';
-import { Link } from 'react-router-dom';
+import { Link,useNavigate } from 'react-router-dom';
 // import { TemplateOne } from '../index';
 function Dashboard() {
   const user = useSelector(selectUserData);
   const [templates, setTemplates] = useState([])
+  const navigate = useNavigate()
   useEffect(() =>{
     service.getTemplates([])
       .then((tempalates) => {
@@ -15,6 +16,9 @@ function Dashboard() {
         }
         else{
           console.log('No templates found');
+          if(!user){
+            navigate('/')
+          }
         }
       })
   },[])

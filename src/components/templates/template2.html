@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template 1</title>
+    <style>
+        :root{
+            --BACKGROUND-COLOR : #440A67;
+            --TEXT-COLOR : #EEE;
+            --TEXT-COLOR-2 : #FFE3FE;
+            --TEXT-COLOR-3 : whitesmoke;
+            --TEXT-COLOR-4 : #d073cd;
+            --COLOR-1 : #93329E;
+            --COLOR-2 : #B4AEE8;
+        }
+        
+        *{
+            box-sizing: border-box;
+            margin: 0px;
+            padding: 0px;
+            background-color: var(--BACKGROUND-COLOR);
+            color: var(--TEXT-COLOR);
+        }
+        
+        html{
+            scroll-behavior: smooth;
+        }
+        body{
+            width: 100%;
+            min-height: 100vh;
+            color: var(--TEXT-COLOR);
+            display: flex;
+            flex-direction: column;
+        }
+        header{
+            top: 0;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            gap: 0.5rem;
+            background-color: var(--BACKGROUND-COLOR);
+            padding: 1rem;
+            border: 2px solid var(--COLOR-1);
+        }
+        main{
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            padding: 0.6rem;
+        }
+    
+        footer{
+            bottom: 0;
+            position: relative;
+            background-color: var(--COLOR-2);
+            height: 2rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: 0.5s;
+        }
+        .logo{
+            padding: 4px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 5rem;
+            height: 5rem;
+        }
+        .logo img{
+            width: 100%;
+            height: auto;
+        }
+
+        .cover{
+            width: 100%;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .cover-content{
+            width: 100%;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .cover-heading2{
+            font-size: 4.2rem;
+            color: var(--COLOR-2);
+            text-align: center;
+        }
+        .cover-heading3{
+            font-size: 1.2rem;
+            font-weight:lighter;
+            color: var(--COLOR-2);
+            text-align: center;
+        }
+        .cover-para{
+            width: 100%;
+            height: auto;
+            padding: 3rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .cover-para a{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration:  none;
+            padding: 1rem;
+        }
+        .cover-para button{
+            cursor: pointer;
+            padding: 0.5rem 0.8rem;
+            border-radius: 10px;
+            background-color: var(--COLOR-1);
+            border-color: var(--COLOR-2);
+            color: var(--TEXT-COLOR);
+            transition-duration: 300ms;
+        }
+        .cover-para button:hover{
+            transform: rotate(-2deg) scale(1.05);
+        }
+
+        .services{
+            width: 100%;
+            height: auto;
+            display: flex;
+
+        }
+
+        .services div{
+            width: 100%;
+            padding: 1rem;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .services img{
+            margin: auto;
+            width: 100%;
+            padding: 1rem;
+        }
+
+        .services h2{
+            color: var(--TEXT-COLOR-2);
+        }
+
+        .info{
+            display: flex;
+            flex-direction: column;
+            padding: 1rem;
+        }
+
+        .info h3{
+            text-align: center;
+            color: var(--TEXT-COLOR-4);
+        }
+        .info p{
+            text-align:justify;
+            color: var(--TEXT-COLOR-2);
+        }
+        
+
+        /* Extra Small Screens */
+        @media screen and (width <= 576px) {
+            .cover-heading2{
+                font-size: 3rem;
+            }
+            .cover-heading3{
+                font-size: 1.1rem;
+            }
+            .cover-para button{
+                font-size: 0.9rem;
+            }
+            .services{
+                flex-direction: column;
+            }
+        }
+        /* Small Screens */
+        @media screen and (576px < width <= 768px  ) {
+            .cover-heading2{
+                font-size: 3.3rem;
+            }
+            .cover-heading3{
+                font-size: 1.15rem;
+            }
+            .cover-para button{
+                font-size: 1rem;
+            }
+            .services{
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                padding: 3rem;
+            }
+            .services div{
+                width: 80%;
+                margin: auto;
+            }
+        }
+        /* Medium Screens */
+        @media screen and (768px < width <= 1024px  ) {
+            .cover-heading2{
+                font-size: 3.7rem;
+            }
+            .cover-heading3{
+                font-size: 1.2rem;
+            }
+            .cover-para button{
+                font-size: 1.1rem;
+            }
+            .services{
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+        /* Large Screens */
+        @media screen and (min-width: 1024px) {
+            .cover-heading2{
+                font-size: 4.2rem;
+            }
+            .cover-heading3{
+                font-size: 1.3rem;
+            }
+            .cover-para button{
+                font-size: 1.35rem;
+            }
+            .services{
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+    </style>
+</head>
+<body class="">
+    <!-- Header -->
+    <header class="header">
+        <div class="logo"><img src="https://images.pexels.com/photos/170809/pexels-photo-170809.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Logo" /></div>
+        <h1>Big Sale is Here..!</h1>
+    </header>
+    <!-- Main -->
+    <main class="">
+        <!-- Cover Section -->
+        <section class="cover">
+            <div class="cover-content">
+                <h2 class="cover-heading2">Save 40%*</h2>
+                <h3 class="cover-heading3">On New Purchases. No Minimum required</h3>
+                <div class="cover-para">
+                    <a href="link" target="_blank"><button class="cover-button">Visit Our Site</button></a> 
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="services">
+            <div class="">
+                <img class="" src="https://img.freepik.com/free-vector/call-center_24877-49036.jpg?t=st=1737297532~exp=1737301132~hmac=74923d337f2185447af04a91f8ed2a405573622c7d5ff428b7109051a5019152&w=740" alt="call image"/>
+                <h2>24/7 Support</h2>
+            </div>
+            <div class="">
+                <img class="" src="https://img.freepik.com/free-vector/call-center_24877-49036.jpg?t=st=1737297532~exp=1737301132~hmac=74923d337f2185447af04a91f8ed2a405573622c7d5ff428b7109051a5019152&w=740" alt="call image"/>
+                <h2>Free Delivery</h2>
+            </div>
+            <div class="">
+                <img class="" src="https://img.freepik.com/free-vector/call-center_24877-49036.jpg?t=st=1737297532~exp=1737301132~hmac=74923d337f2185447af04a91f8ed2a405573622c7d5ff428b7109051a5019152&w=740" alt="call image"/>
+                <h2>Today's Deal</h2>
+            </div> 
+        </section>
+        <section class="info">
+            <h3>Discover other offers expiring in 36 hours</h3>
+            <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt dolorem magnam eaque nulla ut eligendi magni ex recusandae minima omnis tenetur tempore fugit velit, architecto dolores ratione iusto amet expedita.</p>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>&copy; vishnu teja</footer>
+</body>
+</html>
