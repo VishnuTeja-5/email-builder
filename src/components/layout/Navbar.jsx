@@ -15,7 +15,7 @@ function Navbar() {
     }
     return (
         <div className={cn('w-full flex flex-col items-end')}>
-            <div className={cn('w-full flex flex-wrap justify-between items-center')}>
+            <div className={cn('w-full flex justify-between items-center')}>
                 <a href='/' className={cn('')}>
                 <div className={cn('w-28 flex justify-center items-center')}>
                     <img src='/images/logo.png' alt='logo' className={cn('w-full')} />
