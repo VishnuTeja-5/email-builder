@@ -13,9 +13,9 @@ function LogoutBtn() {
     })
   }
   return (
-    <Link>
+    <Link to={'/'}>
       <motion.button
-        className='p-2 flex justify-center items-center rounded-md bg-blue-500 '
+        className='p-2 flex justify-center items-center rounded-md bg-blue-500 text-white hover:bg-blue-700 '
         whileHover={{
           scale: 1.05
         }}

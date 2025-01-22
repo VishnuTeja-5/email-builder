@@ -15,17 +15,17 @@ function Navbar() {
     }
     return (
         <div className={cn('w-full flex flex-col items-end')}>
-            <div className={cn('w-full flex justify-between items-center')}>
+            <div className={cn('w-full flex flex-wrap justify-between items-center')}>
                 <a href='/' className={cn('')}>
-                <div className={cn('size-16')}>
-                    <img src='/images/logo.png' className={cn('w-full')} />
+                <div className={cn('w-28 flex justify-center items-center')}>
+                    <img src='/images/logo.png' alt='logo' className={cn('w-full')} />
                 </div>
                 </a>
                 { authStatus ? (<LogoutBtn/>) : (
                     <div className={cn('w-full flex justify-end items-center gap-2')}>
                     <Link to={'/login'}>
                     <motion.button
-                        className='p-2 flex justify-center items-center rounded-md bg-blue-500 '
+                        className='p-2 flex justify-center items-center rounded-md bg-blue-500 text-white hover:bg-blue-700 '
                         whileHover={{
                             scale:1.05
                         }}
@@ -42,7 +42,7 @@ function Navbar() {
                     </Link>
                     <Link to={'/signup'}>
                     <motion.button
-                        className='p-2 flex justify-center items-center rounded-md bg-blue-500 '
+                        className='p-2 flex justify-center items-center rounded-md bg-blue-500 text-white hover:bg-blue-700 '
                         whileHover={{
                             scale:1.05
                         }}

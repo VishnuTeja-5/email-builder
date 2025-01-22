@@ -34,9 +34,9 @@ function Dashboard() {
       <div className='w-full h-full p-2 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 place-items-center gap-4 wrap'>
       {
         templates.map((template) => (
-          <Link to={`/edit/${template?.$id}`}>
+          <Link to={`/edit/${template?.$id}`} key={template?.$id}>
           <div className='max-w-[16rem] p-4 border border-blue-500 rounded-md'
-           key={template?.$id}>
+           >
             <img src={template?.Image} alt={template?.Name} />
             <h2 className='w-full text-center font-semibold text-xl'>{template?.Name}</h2>
             {/* <p>{template.templateContent}</p> */}
@@ -44,59 +44,10 @@ function Dashboard() {
           </div>
           </Link>))
       }
-      {
-        templates.map((template) => (
-          <div className='w-[16rem] p-4 border border-blue-500 rounded-md'
-           key={template?.$id}>
-            <img src={template?.Image} alt={template?.Name} />
-            <h2 className='w-full text-center font-semibold text-xl'>{template?.Name}</h2>
-            {/* <p>{template.templateContent}</p> */}
-            {/* <p>{template.templateData}</p> */}
-          </div>))
-      }
-      {
-        templates.map((template) => (
-          <div className='w-[16rem] p-4 border border-blue-500 rounded-md'
-           key={template?.$id}>
-            <img src={template?.Image} alt={template?.Name} />
-            <h2 className='w-full text-center font-semibold text-xl'>{template?.Name}</h2>
-            {/* <p>{template.templateContent}</p> */}
-            {/* <p>{template.templateData}</p> */}
-          </div>))
-      }
-      {
-        templates.map((template) => (
-          <div className='w-[16rem] p-4 border border-blue-500 rounded-md'
-           key={template?.$id}>
-            <img src={template?.Image} alt={template?.Name} />
-            <h2 className='w-full text-center font-semibold text-xl'>{template?.Name}</h2>
-            {/* <p>{template.templateContent}</p> */}
-            {/* <p>{template.templateData}</p> */}
-          </div>))
-      }
-      {
-        templates.map((template) => (
-          <div className='w-[16rem] p-4 border border-blue-500 rounded-md'
-           key={template?.$id}>
-            <img src={template?.Image} alt={template?.Name} />
-            <h2 className='w-full text-center font-semibold text-xl'>{template?.Name}</h2>
-            {/* <p>{template.templateContent}</p> */}
-            {/* <p>{template.templateData}</p> */}
-          </div>))
-      }
-      {
-        templates.map((template) => (
-          <div className='w-[16rem] p-4 border border-blue-500 rounded-md'
-           key={template?.$id}>
-            <img src={template?.Image} alt={template?.Name} />
-            <h2 className='w-full text-center font-semibold text-xl'>{template?.Name}</h2>
-            {/* <p>{template.templateContent}</p> */}
-            {/* <p>{template.templateData}</p> */}
-          </div>))
-      }
+      
+      
       </div>
     </div>
-    {/* <TemplateOne /> */}
     </>
   ) : ( null)
 }

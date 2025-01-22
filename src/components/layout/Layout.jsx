@@ -21,7 +21,7 @@ function Layout() {
     .finally(() => setLoading(false))
   }, [])
   return !loading ? (
-    <div className=' w-full min-h-screen flex flex-col gap-2'>
+    <div className=' w-full min-h-screen flex flex-col'>
         <Header/>
         <div className='w-full h-full flex-grow'>
           <Outlet />
